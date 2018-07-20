@@ -1,53 +1,62 @@
-create table references (
+USE metabolomics;
+
+create table t_references (
   parent_id varchar(255), 
-  id varchar(255), 
-  parent_tag varchar(255), 
+  id text, 
+  parent_tag text, 
   pubmed_id varchar(255), 
   reference_text text
  ); 
 
 
-create table pathways (
+create table t_pathways (
   parent_id varchar(255), 
-  id varchar(255), 
-  parent_tag varchar(255), 
-  name varchar(255), 
-  smpdb_id varchar(255)
+  id text, 
+  parent_tag text, 
+  name text, 
+  smpdb_id varchar(255),
+  kegg_map_id text
 );
 
 
-create table metabolites (
+create table t_metabolites (
   parent_id varchar(255), 
-  id varchar(255), 
-  parent_tag varchar(255), 
-  iupac_name varchar(255), 
-  inchikey varchar(255), 
-  traditional_iupac varchar(255), 
-  smiles varchar(255), 
+  id text, 
+  parent_tag text, 
+  iupac_name text, 
+  inchikey text, 
+  traditional_iupac text, 
+  smiles text, 
   description text, 
-  accession varchar(255), 
-  nugowiki varchar(255), 
+  accession text, 
+  nugowiki text, 
   foodb_id varchar(255), 
   pubchem_compound_id varchar(255), 
   bigg_id varchar(255), 
-  state varchar(255), 
+  state text, 
   biocyc_id varchar(255), 
   wikipidia text, 
-  inchi varchar(255), 
+  inchi text, 
   chemspider_id varchar(255), 
-  synthesis_reference varchar(255), 
-  creation_date varchar(255), 
-  version varchar(255), 
-  update_date varchar(255), 
-  cs_description varchar(255), 
+  synthesis_reference text, 
+  creation_date text, 
+  version text, 
+  update_date text, 
+  cs_description text, 
   kegg_id varchar(255), 
-  monisotopic_molecular_weight varchar(255), 
+  monisotopic_molecular_weight text, 
   metlin_id varchar(255), 
-  name varchar(255), 
-  cas_registry_number varchar(255), 
-  chemical_formula varchar(255), 
-  average_molecular_weight varchar(255), 
+  name text, 
+  cas_registry_number text, 
+  chemical_formula text, 
+  average_molecular_weight text, 
   het_id varchar(255), 
-  status varchar(255), 
-  chebi_id varchar(255)
+  status text, 
+  chebi_id varchar(255),
+  knapsack_id varchar(255),
+  drugbank_id varchar(255),
+  metagene text(255),
+  phenol_explorer_compound_id varchar(255),
+  phenol_explorer_metabolite_id varchar(255),
+  drugbank_metabolite_id text
  );

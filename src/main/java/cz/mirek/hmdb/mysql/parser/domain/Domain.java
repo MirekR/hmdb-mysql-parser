@@ -1,5 +1,7 @@
 package cz.mirek.hmdb.mysql.parser.domain;
 
+import org.apache.commons.lang3.StringEscapeUtils;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -56,10 +58,14 @@ public class Domain {
             values.append(", ");
 
             columns.append(key);
-            values.append("'").append(value.toString()).append("'");
+            values.append("'").append(StringEscapeUtils.escapeEcmaScript(value.toString())).append("'");
         });
 
-        return "insert into " + tagName + "s (" + columns + ") values ("+ values +");";
+        return "insert into " + getTagAsTableName() + " (" + columns + ") values ("+ values +");";
+    }
+
+    private String getTagAsTableName() {
+        return "t_" + tagName + "s";
     }
 
     @Override

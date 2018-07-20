@@ -18,6 +18,8 @@ public class Main {
 
         FileWriter fw = new FileWriter(new File(results));
 
+        fw.write("USE metabolomics; \n\n");
+
         Consumer<Domain> domainConsumer = domain -> {
             try {
                 fw.write(domain.toString() + "\n");
