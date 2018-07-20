@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class SaxReader {
-    private List<String> defaultInclude = Arrays.asList("metabolite", "pathway");
+    private List<String> defaultInclude = Arrays.asList("metabolite", "pathway", "disease");
 
     public void parseFile(InputStream inputStream, Consumer<Domain> domainConsumer) throws ParserConfigurationException, SAXException, IOException {
         SAXParserFactory factory = SAXParserFactory.newInstance();

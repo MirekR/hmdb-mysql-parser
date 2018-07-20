@@ -24,10 +24,13 @@ public class SaxReaderTest {
 
         saxReader.parseFile(this.getFilePath("oneMetabolite.xml"), domainConsumer);
 
-        assertThat(domains.size(), is(127));
+        assertThat(domains.size(), is(137));
 
         long pathwaysCnt = domains.stream().filter(domain -> "pathway".equals(domain.getTagName())).count();
         assertThat(pathwaysCnt, is(2L));
+
+        long diseaseCnt = domains.stream().filter(domain -> "disease".equals(domain.getTagName())).count();
+        assertThat(diseaseCnt, is(10L));
     }
 
     private String getFilePath(String fileName){

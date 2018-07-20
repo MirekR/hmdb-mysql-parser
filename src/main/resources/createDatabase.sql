@@ -20,6 +20,10 @@ create table t_pathways (
   kegg_map_id text
 );
 
+create table t_diseases (
+  omim_id varchar(255),
+  name text
+);
 
 create table t_metabolites (
   parent_id varchar(255), 
