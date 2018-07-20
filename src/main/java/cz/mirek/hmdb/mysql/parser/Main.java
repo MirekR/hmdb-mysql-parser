@@ -29,5 +29,7 @@ public class Main {
         };
 
         saxReader.parseFile(file, domainConsumer);
+
+        fw.flush();
     }
 }

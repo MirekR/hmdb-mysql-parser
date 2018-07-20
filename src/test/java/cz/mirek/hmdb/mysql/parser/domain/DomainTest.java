@@ -11,7 +11,7 @@ public class DomainTest {
     public void shouldGenerateInsertStatementWithIdsOnly() {
       Domain domain = new Domain("TEST", "XXX", 1, 2);
 
-      assertThat(domain.toString(), is("insert into TESTs (parent_id, id, parent_tag) values (2, 1, 'XXX');"));
+      assertThat(domain.toString(), is("insert into t_TESTs (parent_id, id, parent_tag) values (2, 1, 'XXX');"));
     }
 
     @Test
@@ -19,7 +19,6 @@ public class DomainTest {
         Domain domain = new Domain("TEST", "XXX", 1, 2);
         domain.add("colName", "colValue");
 
-        assertThat(domain.toString(), is("insert into TESTs (parent_id, id, parent_tag, colName) values (2, 1, 'XXX', 'colValue');"));
+        assertThat(domain.toString(), is("insert into t_TESTs (parent_id, id, parent_tag, colName) values (2, 1, 'XXX', 'colValue');"));
     }
-
 }

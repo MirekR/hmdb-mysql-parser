@@ -27,14 +27,6 @@ public class SaxReader {
         MysqlHandler handler = new MysqlHandler(this::filterDomains, domainConsumer);
 
         saxParser.parse(is, handler);
-
-//        Tag parent = treeHandler.getPaths().get("[]");
-//        parent.printString(0);
-
-//        List<Domain> allDomains = handler.getAllDomains();
-//
-//        allDomains.stream().filter(this::filterDomains).forEach(domainConsumer);
-
     }
 
     public void parseFile(String filePath, Consumer<Domain> domainConsumer) throws IOException, ParserConfigurationException, SAXException {
