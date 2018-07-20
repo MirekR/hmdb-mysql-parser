@@ -1,3 +1,5 @@
+CREATE DATABASE metabolomics IF NOT EXISTS;
+
 USE metabolomics;
 
 create table t_references (
