@@ -3,3 +3,4 @@
 target/
 results.sql
 hmdb_metabolites.xml
+docker-data/
