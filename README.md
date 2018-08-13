@@ -23,3 +23,9 @@ Using the generated commands in mysql:
     - `mysql -u root -p < dropTables.sql`
     - `mysql -u root -p < createDatabase.sql`
     - `mysql -u root -p < results.sql`
+
+  - selecting data from the Docker command line:
+    - `mysql -u root -p`
+    - `use metabolomics;`
+    - `show tables;`
+    - `select * from TABLE_YOU_WANT;`  ... refer to the MySQL documentation for possible queries.
